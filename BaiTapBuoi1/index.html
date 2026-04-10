@@ -10,8 +10,8 @@
     <h1>ES2025 JavaScript: Patterns và Libraries Hot Nhất Cho Developer Việt 2026</h1>
     <h2>ES2025 ra mắt - cái gì thật sự vào spec?</h2>
 
-    <p>Tháng 6/2025, TC39 chính thức công bố ECMAScript 2025 (ES16). Nếu bạn hay follow Twitter/X dev community, chắc nghe nhiều về pipeline operator hay Temporal API - nhưng cả hai vẫn chưa vào spec. Đừng để bị nhầm.</p>
-    <p>Cái <strong>thật sự</strong>vào ES2025 gồm 6 nhóm tính năng :</p>
+    <p class="text">Tháng 6/2025, TC39 chính thức công bố ECMAScript 2025 (ES16). Nếu bạn hay follow Twitter/X dev community, chắc nghe nhiều về pipeline operator hay Temporal API - nhưng cả hai vẫn chưa vào spec. Đừng để bị nhầm.</p>
+    <p class="text">Cái <strong>thật sự</strong>vào ES2025 gồm 6 nhóm tính năng :</p>
     
     <ul>
         <li>
@@ -25,6 +25,48 @@
         <li>
             <p><strong>Promise.try()</strong> - bắt cả sync lẫn async errors trong một chain</p>
         </li>
+
+        <li>
+            <p><strong>RegExp improvements</strong> - flag <code>/v</code> , <code>RegExp.escape()</code> , duplicate named groups</p>
+        </li>
+
+        <li>
+            <p><strong>Import Attributes</strong> - <code>import data from "./data.json" with &#123; type: "json" &#125;</code></p>
+        </li>
+
+        <li>
+            <p><strong>Float16Array</strong> - typed array 16-bit cho memory-sensitive workloads</p>
+        </li>
     </ul>
+
+    <p class="ES2025-features">
+        <img src="https://files.f8.edu.vn/f8-prod/blog_posts/13485/section_0_260323080636_69c0921c0cf292.71514803.png" alt="Ảnh"> <br/>
+        <em>ES2025 tập trung vào iterator, set, và async - không phải pipeline operator như nhiều bài viết nhầm</em>
+    </p>
+
+    <p class="text">Node.js 22+ và các browser Chrome/Firefox/Safari release sau tháng 6/2025 đã support native. Không cần polyfill cho production nếu bạn target môi trường đủ mới.</p>
+   
+    <p>Pipeline operator &#40;<code>|></code>&#41; và Temporal API? Vẫn đang ở Stage 2-3. Dùng Luxon hoặc date-fns cho date/time là lựa chọn thực tế nhất hiện tại.</p>
+
+    <h2>Iterator Helpers và Set Methods - dùng thật trong dự án thế nào?</h2>
+
+    <p>Hai tính năng này mình thấy practical nhất trong ES2025 cho daily work.</p>
+
+    <p><strong>Iterator Helpers</strong>giải quyết bài toán bạn từng phải import lodash chỉ để <code>map + filter + slice</code> một mảng lớn. Bây giờ không cần nữa:</p>
+
+    <div class="code-example">
+        <p>// Trước ES2025 - load cả mảng vào memory</p>
+        <pre><code>const result = apiData
+    .filter(item => item.active)
+    .map(item => item.name)
+    .slice(0, 100);</code></pre>
+
+        <p>// ES2025 - lazy evaluation, chỉ xử lý đến khi đủ 100 item</p>
+        <pre><code>const result = Iterator.from(apiData)
+    .filter(item => item.active)
+    .map(item => item.name)
+    .take(100)
+    .toArray();</code></pre>
+    </div>
 </body>
 </html>

@@ -1,3 +1,12 @@
 strong {
     background-color: #c9fffc;
 }
+
+img {
+    border-radius: 15px;
+    height: 400px;
+}
+
+.text {
+    margin-bottom: 15px;
+}
