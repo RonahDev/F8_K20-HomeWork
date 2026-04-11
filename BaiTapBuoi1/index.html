@@ -68,5 +68,122 @@
     .take(100)
     .toArray();</code></pre>
     </div>
+
+    <p>Khác biệt quan trọng: <code class="code-css">Iterator.from()</code><strong class="strong-non-css"> lazy </strong> - với mảng 10.000 item nhưng chỉ cần 100 kết quả đầu, nó không xử lý 9.900 item còn lại.Lodash chain cũng làm được điều này, nhưng giờ là native.</p>
+
+    <p>
+        <img src="https://files.f8.edu.vn/f8-prod/blog_posts/13485/section_1_260323080703_69c092375aabc3.16191064.png" alt=""> <br/>
+
+        <em>Lazy evaluation: chỉ xử lý đúng số item cần thiết, tiết kiệm CPU và memory đáng kể </em>
+    </p>
+
+    <p>
+        <strong class="strong-non-css">Set Methods</strong> thì đặc biệt hữu ích cho permission systems hoặc dedup realtime data:
+    </p>
+
+    <div class="code-example"><pre><code>const userRoles = new Set(['admin', 'editor']);
+const requiredRoles = new Set(['editor', 'viewer']);</code></pre>
+
+        <p class="text-none-css">// Kiểm tra overlap</p> 
+        <code>const hasAccess = !userRoles.intersection(requiredRoles).size === 0;</code>
+        <p></p>
+
+        <p class="text-none-css">// Chat app: merge messages từ 2 nguồn, không trùng</p>
+        <code>const allMessages = socketMessages.union(cachedMessages);</code>
+        <p></p>
+
+        <p class="text-none-css">// Diff để biết message mới</p>
+        <code>const newMessages = socketMessages.difference(cachedMessages);</code>
+    </div>
+
+    <p>Trước đây bạn phải tự viết <code class="code-css">[...setA].filter(x => setB.has(x))</code>. Dài, khó đọc, dễ bug. Set methods native clean hơn nhiều và chain được với nhau.</p>
+
+    <h2>Promise.try() và async/await patterns nâng cao</h2>
+    <p>Đây là tính năng mình mong nhất trong ES2025. Vấn đề cũ:</p>
+
+    <div class="code-example">
+        <p>// Bug tiềm ẩn: nếu getUser() throw sync, không bị catch!</p>
+        <pre><code>async function loadProfile(id) {
+  return getUser(id) // sync function, throw không bị catch bởi .catch()
+    .then(user => fetchDetails(user));
+}</code></pre>
+    </div>
+
+    <p>
+        <code class="code-css">Promise.try()</code> fix đúng điểm này:
+    </p>
+    <div class="code-example">
+        <p>// Promise.try wrap cả sync throw vào promise chain</p>
+        <pre><code>Promise.try(() => getUser(id))
+  .then(user => fetchDetails(user))
+  .catch(err => handleError(err)); // bắt được cả sync lẫn async error</code></pre>
+    </div>
+
+    <strong>
+        Pattern mạnh hơn: kết hợp với async generators cho streaming data
+    </strong>
+
+    <div class="code-example">
+        <pre><code>async function* streamDashboardData(endpoint) {
+  const response = await Promise.try(() => fetch(endpoint));
+  const reader = response.body.getReader();
+  
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    
+    // Dùng Iterator Helpers để transform ngay trên stream
+    yield* Iterator.from([value])
+      .map(chunk => JSON.parse(new TextDecoder().decode(chunk)))
+      .filter(data => data.type === 'update');
+  }
+}</code>
+       </pre>
+
+    <p>// Consume trong component</p>
+    <pre><code>for await (const update of streamDashboardData('/api/stream')) {
+  updateUI(update);
+}</code>
+    </pre>
+    </div>
+
+    <p>
+        <img src="https://files.f8.edu.vn/f8-prod/blog_posts/13485/section_2_260323080728_69c09250954f10.74211997.png" alt=""> <br/>
+        <em>Promise.try + async generator = xử lý stream data không bị miss error ở bất kỳ điểm nào</em>
+    </p>
+
+    <p>
+        <strong>Top-level await </strong>(ES2022 nhưng hay dùng chung với ES2025 patterns) cũng clean hơn khi kết hợp Set ops:
+    </p>
+
+    <div class="code-example">
+        <p class="text-none-css">// module.js - init một lần, share across module</p>
+        <pre><code>const initialPermissions = new Set(await fetchUserPermissions());
+const cachedPermissions = new Set(JSON.parse(localStorage.getItem('perms') ?? '[]'));</code>
+        </pre>
+
+        <p class="text-none-css">// Merge, loại bỏ duplicate</p>
+        <code>export const permissions = initialPermissions.union(cachedPermissions);</code>
+    </div>
+
+    <p>Nếu bạn muốn nền tảng JavaScript vững để apply những patterns này ngay, khóa <a href="https://f8.edu.vn/javascript" target="_blank">JavaScript Pro</a>
+    cover sâu về async/await, closures, và cách JS engine thực sự hoạt động - đủ để đọc ES2025 spec mà hiểu rõ tại sao.
+    </p>
+
+    <h2>RxJS vs Zustand - chọn gì cho realtime web app?</h2>
+    <p>Mình sẽ không nói "cái nào tốt hơn" vì câu trả lời phụ thuộc vào loại app bạn đang build.</p>
+
+    <p>
+        <strong>RxJS</strong> <a href="https://rxjs.dev/" target="_blank">RxJS docs</a>
+        là reactive programming library với Observable - phù hợp khi data flow của bạn phức tạp, nhiều nguồn, cần backpressure hay timing control:
+    </p>
+
+    <div class="code-example">
+        <pre><code>import { fromEvent, Subject } from 'rxjs';
+import { debounceTime, scan, filter } from 'rxjs/operators';
+
+const socket = new WebSocket('wss://api.example.com/live');</code>
+        </pre>
+    </div>
 </body>
 </html>

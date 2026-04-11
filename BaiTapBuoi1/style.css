@@ -1,12 +1,38 @@
+/* strong */
 strong {
     background-color: #c9fffc;
 }
 
+.strong-non-css {
+    background : none;
+}
+
+/* code */
+.code-css{
+     background-color: #c9fffc;
+}
+
+/* Image */
 img {
     border-radius: 15px;
     height: 400px;
 }
 
+/* Text */
 .text {
     margin-bottom: 15px;
+}
+
+.text-none-css{
+    margin: 0;  
+    padding : 0;
+}
+
+/* Link */
+a {
+    color: #f05123;
+}
+/* Others */
+.code-example {
+    background-color: #eef4fc;
 }
