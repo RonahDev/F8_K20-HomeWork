@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
 />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    
 </head>
 <body>
-    <h1>Style a Blog Post with CSS: beginner-friendly tutorial</h1>
-    <a href="https://www.mergesociety.com/about">Written by Massa Medi</a> <time datetime="">
-| January 5, 2025</time>
+    <header>
+        <h1>Style a Blog Post with CSS: beginner-friendly tutorial</h1>
+        <p>
+            Written by Massa Medi&nbsp;|&nbsp;
+            <time datetime="2025-01-05">January 5, 2025</time>
+        </p>
+    </header>
 
+    
     <p>Styling a blog post is a fundamental skill for web developers. In this tutorial, we'll guide you through the process of creating a simple blog post using HTML and CSS. You'll learn how to apply font families, text colors, and adjust line height and spacing to enhance readability.</p>
     <p>By the end of this tutorial, you'll have a well-styled blog post that you can use as a template for your own blog or website.</p>
 
@@ -30,22 +36,22 @@
     <h3>Creating Your Project Folder</h3>
 
     <p>Next, let's create a dedicated folder to keep all your blog post files organized:</p>
-    <ol>
+    <ul>
         <li>Open your file explorer (Windows) or Finder (Mac).</li>
         <li>Navigate to your Documents folder (or any other location you prefer).</li>
         <li>Right-click in an empty space and select "New > Folder".</li>
         <li>Name the folder "my-blog-post" and press Enter.</li>
-    </ol>
+    </ul>
 
     <p>Having a separate folder for your blog post project will help you stay organized and make it easier to manage your files.</p>
 
     <h3>Opening Your Project in VS Code</h3>
     <p>Now, let's open your project folder in VS Code:</p>
-    <ol>
+    <ul>
         <li>Open VS Code.</li>
         <li>Click on "File" in the top menu, then select "Open Folder" (Windows) or "Open..." (Mac).</li>
         <li>Find and select your "my-blog-post" folder, then click "Open".</li>
-    </ol>
+    </ul>
     <p>This will load your project folder in VS Code, allowing you to work on your blog post files.</p>
 
     <h3>Creating Your Project Files</h3>
@@ -271,6 +277,344 @@ body {
         </li>
     </ul>
 
+    <h3>Step 3: Style the Header Section</h3>
+    <p>Add the following CSS rules to your styles.css file:</p>
+
+    <pre><code class="language-css">
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d; 
+    margin-bottom: 15px;
+}
+</code></pre>
+
+    <p>These styles will make your header section look more polished and professional:</p>
+
+    <ul>
+        <li>
+            <code>text-align: center;</code> centers the content within the header.
+        </li>
+        <li>
+            <code>padding</code> adds some spacing around the content.
+        </li>
+        <li>
+            <code>background-color</code> and <code>border-radius</code> give the header a subtle background and rounded corners.
+        </li>
+        <li>
+            <code>margin-bottom</code> adds some spacing below the header.
+        </li>
+        <li>
+            <code>h1</code> and <code>.subtitle</code> styles target the specific elements within the header.
+        </li>
+    </ul>
+
+    <h3>Step 4: Style the Blog Post Content</h3>
+    <p>Add the following CSS rules to your styles.css file:</p>
+    <pre><code class="language-css">
+article {
+    margin-bottom: 50px;
+}
+
+article section {
+    margin-bottom: 30px;
+}
+
+article h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+article ul {
+    margin-bottom: 20px;
+}
+
+article li {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+</code></pre>
+
+    <p>These styles will make your blog post content more readable and visually appealing:</p>
+    <ul>
+        <li>
+            <code>article</code> styles target the entire blog post content.
+        </li>
+        <li>
+            <code>margin-bottom</code> adds some spacing below the blog post.
+        </li>
+        <li>
+            <code>section</code> styles target the individual sections within the blog post.
+        </li>
+        <li>
+            <code>h2</code> styles the section headings.
+        </li>
+        <li>
+            <code>p</code> styles the paragraph content, setting the font size, line height, and color.
+        </li>
+        <li>
+            <code>ul</code> and <code>li</code> styles target the list items, setting the font size and color.
+        </li>
+    </ul>
+
+    <h3>Step 5: Style the Footer</h3>
+    <p>Add the following CSS rules to your styles.css file:</p>
+    <pre><code class="language-css">
+footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+</code></pre>
+
+    <p>These styles will make your footer section stand out at the bottom of the page:</p>
+    <ul>
+        <li>
+            <code>margin-top</code> adds some spacing above the footer.
+        </li>
+        <li>
+            <code>padding</code> adds space around the footer content.
+        </li>
+        <li>
+            <code>background-color</code> and <code>color</code> give the footer a dark blue background and white text.
+        </li>
+        <li>
+            <code>border-radius</code> rounds the corners of the footer.
+        </li>
+        <li>
+            <code>text-align: center;</code> centers the content within the footer.
+        </li>
+        <li>
+            <code>footer p</code> styles the footer content, setting the margin.
+        </li>
+    </ul>
+
+    <h2>Understanding the CSS</h2>
+    <p>Let's quickly review the CSS concepts we've used so far:</p>
+    <ul>
+        <li>
+            <code>margin</code> creates space outside elements.
+        </li>
+        <li>
+            <code>padding</code> creates space inside elements.
+        </li>
+        <li>
+            <code>box-sizing: border-box;</code> ensures that the width and height of an element include the padding and border.
+        </li>
+        <li>
+            <code>border-radius</code> rounds the corners of elements.
+        </li>
+        <li>
+            <code>line-height</code> sets the vertical spacing between lines of text.
+        </li>
+        <li>
+            <code>font-size</code> sets the size of the text.
+        </li>
+        <li>
+            <code>color</code> sets the text color of an element.
+        </li>
+        <li>
+            <code>background-color</code> sets the background color of an element.
+        </li>
+    </ul>
+
+    <h2>Testing Your Responsive Design</h2>
+    <p>To ensure your blog post looks great on different devices, follow these steps:</p>
+    <ul>
+        <li>
+            Open your <code>index.html</code> file in a web browser (e.g., Google Chrome).
+        </li>
+        <li>
+            Press <code>F12</code> (or right-click and select <code>Inspect</code>) to open the browser's Developer Tools.
+        </li>
+        <li>
+            Click the <code>Toggle device toolbar</code> icon (it looks like a phone/tablet).
+        </li>
+        <li>
+            Try different device sizes to see how your site responds and adjust your CSS accordingly.
+        </li>
+    </ul>
+    <p>This will allow you to test your blog post on various screen sizes and make any necessary adjustments to the CSS to ensure it looks great on both desktop and mobile devices.</p>
+
+    <h2>Final Code</h2>
+    <p>Here is the final code for your blog post:</p>
+
+    <h3>index.html</h3>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Blog Post&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My First Blog Post&lt;/h1&gt;
+        &lt;p class="subtitle"&gt;Published on October 1, 2023&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;article&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Introduction&lt;/h2&gt;
+            &lt;p&gt;
+                Welcome to my first blog post. In this post, I'll be discussing the
+                importance of web development and how to get started.
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Why Web Development?&lt;/h2&gt;
+            &lt;p&gt;
+                Web development is a crucial skill in today's digital world.
+                It allows you to create interactive and engaging websites.
+            &lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Getting Started with Web Development&lt;/h2&gt;
+            &lt;p&gt;
+                To get started with web development, you'll need HTML, CSS, and JavaScript.
+            &lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;HTML: Structure of the web page&lt;/li&gt;
+                &lt;li&gt;CSS: Styling and layout of the web page&lt;/li&gt;
+                &lt;li&gt;JavaScript: Interactivity and dynamic content&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Conclusion&lt;/h2&gt;
+            &lt;p&gt;
+                Web development is a rewarding field with endless possibilities.
+            &lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/article&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Author: Your Name&lt;/p&gt;
+        &lt;p&gt;Email: your.email@example.com&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <h3>styles.css</h3>
+    <pre><code class="language-css">
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d; 
+    margin-bottom: 15px;
+}
+
+/* Blog post content styles */
+article {
+    margin-bottom: 50px;
+}
+
+article section {
+    margin-bottom: 30px;
+}
+
+article h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+article ul {
+    margin-bottom: 20px;
+}
+
+article li {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+</code></pre>
+
+    <footer>
+        <p>&copy; 2026 MergeSociety. All rights reserved.</p>
+    </footer>
     
 </body>
 </html>
