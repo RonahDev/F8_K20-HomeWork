@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung tâm cấu hình giao diện</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trung tâm cấu hình giao diện (Demo)</h1>
+
+        <!-- Input ẩn để CSS bắt trạng thái -->
+        <input type="radio" name="theme" id="light" checked hidden>
+        <input type="radio" name="theme" id="dark" hidden>
+
+        <input type="radio" name="color" id="red" checked hidden>
+        <input type="radio" name="color" id="blue" hidden>
+        <input type="radio" name="color" id="green" hidden>
+
+        <input type="radio" name="lang" id="vi" checked hidden>
+        <input type="radio" name="lang" id="en" hidden>
+
+        <input type="checkbox" id="advanced" hidden>
+        <input type="checkbox" id="eco" hidden>
+        <input type="checkbox" id="warning" hidden>
+
+        <!-- KHU ĐIỀU KHIỂN -->
+        <div class="control">
+            <!-- Theme -->
+            <div class="group">
+                <div class="group-title"><strong>Chọn giao diện (Theme):</strong></div>
+                <div class="options">
+                    <label for="light" class="opt theme-light">Light</label>
+                    <label for="dark" class="opt theme-dark">Dark</label>
+                </div>
+            </div>
+
+            <!-- Color -->
+            <div class="group">
+                <div class="group-title"><strong>Chọn màu chủ đạo (Color):</strong></div>
+                <div class="options">
+                    <label for="red" class="opt color-red">Red</label>
+                    <label for="blue" class="opt color-blue">Blue</label>
+                    <label for="green" class="opt color-green">Green</label>
+                </div>
+            </div>
+
+            <!-- Language -->
+            <div class="group">
+                <div class="group-title"><strong>Chọn ngôn ngữ (Language):</strong></div>
+                <div class="options">
+                    <label for="vi" class="opt lang-vi">VI</label>
+                    <label for="en" class="opt lang-en">EN</label>
+                </div>
+            </div>
+
+            <!-- Options -->
+            <div class="group">
+                <div class="group-title"><strong>Tùy chọn bổ sung (Options - Checkbox):</strong></div>
+                <div class="options checkbox-group">
+                    <label for="advanced" class="opt opt-advanced">Hiển thị mô tả nâng cao</label>
+                    <label for="eco" class="opt opt-eco">Bật chế độ Eco</label>
+                    <label for="warning" class="opt opt-warning">Hiển thị cảnh báo quan trọng</label>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- KHU KẾT QUẢ -->
+        <div class="result">
+            <div class="result-item result-light">Theme Light: Giao diện sáng, chữ đen.</div>
+            <div class="result-item result-dark">Theme Dark: Giao diện tối, chữ sáng.</div>
+
+            <div class="result-item result-red">Màu Red: được nhấn mạnh khi chọn Red.</div>
+            <div class="result-item result-blue">Màu Blue: được nhấn mạnh khi chọn Blue.</div>
+            <div class="result-item result-green">Màu Green: được nhấn mạnh khi chọn Green.</div>
+
+            <div class="result-item result-vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</div>
+            <div class="result-item result-en">[EN] Hello, world! Khi chọn EN, dòng này rõ hơn.</div>
+
+            <div class="result-item result-advanced">Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</div>
+            <div class="result-item result-eco">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</div>
+            <div class="result-item result-warning">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</div>
+        </div>
+    </div>
+</body>
+</html>
