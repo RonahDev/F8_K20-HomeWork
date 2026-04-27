@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai1.html</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 30px;
+        }
+
+        div {
+            display: inline-block;
+            margin: 20px;
+            vertical-align: top;
+        }
+
+        /* 1. Hình vuông */
+        .square {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #d66a4f;
+        }
+
+        /* 2. Hình chữ nhật */
+        .rectangle {
+            width: 90px;
+            height: 50px;
+            border: 2px solid #6fa3f7;
+        }
+
+        /* 3. Tam giác lên */
+        .triangle-up {
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 70px solid #5cb85c;
+        }
+
+        /* 4. Tam giác xuống */
+        .triangle-down {
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-top: 70px solid #d9a441;
+        }
+
+        /* 5. Tam giác trái */
+        .triangle-left {
+            width: 0;
+            height: 0;
+            border-top: 35px solid transparent;
+            border-bottom: 35px solid transparent;
+            border-right: 70px solid #9b6ad6;
+        }
+
+        /* 6. Tam giác phải */
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border-top: 35px solid transparent;
+            border-bottom: 35px solid transparent;
+            border-left: 70px solid #d98a2f;
+        }
+
+        /* 7. Hình thang */
+        .trapezoid {
+            width: 70px;
+            height: 0;
+            border-bottom: 45px solid #69c2a4;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+        }
+
+        /* 8. Tam giác rộng */
+        .wide-triangle {
+            width: 0;
+            height: 0;
+            border-left: 45px solid transparent;
+            border-right: 45px solid transparent;
+            border-bottom: 35px solid #3d4d67;
+        }
+
+        /* 9. Tam giác nhọn */
+        .sharp-triangle {
+            width: 0;
+            height: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-bottom: 70px solid #b84f35;
+        }
+
+        /* 10. Tam giác cân */
+        .isosceles {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 50px solid #c96b1e;
+        }
+
+        /* 11. Mũi tên phải */
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left: 50px solid #58b392;
+        }
+
+        /* 12. Mũi tên trái */
+        .arrow-left {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 50px solid #8c57c5;
+        }
+
+        /* 13. Ribbon / Lá cờ */
+        .ribbon {
+            width: 80px;
+            height: 0;
+            border-top: 35px solid #d45b3f;
+            border-bottom: 35px solid #d45b3f;
+            border-right: 35px solid transparent;
+        }
+
+        /* 14. F8 */
+        .f {
+            width: 70px;
+            height: 120px;
+            border-left: 18px solid #d85b3d;
+            border-top: 18px solid #d85b3d;
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        .f::before {
+            content: "";
+            display: block;
+            width: 55px;
+            border-top: 18px solid #d85b3d;
+            margin-top: 35px;
+        }
+
+        .eight {
+            width: 55px;
+            height: 120px;
+            border: 18px solid #d85b3d;
+            display: inline-block;
+        }
+
+        .eight::before {
+            content: "";
+            display: block;
+            width: 55px;
+            border-top: 18px solid #d85b3d;
+            margin-top: 42px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square"></div>
+    <div class="rectangle"></div>
+    <div class="triangle-up"></div>
+    <div class="triangle-down"></div>
+    <div class="triangle-left"></div>
+    <div class="triangle-right"></div>
+    <div class="trapezoid"></div>
+
+    <br>
+
+    <div class="wide-triangle"></div>
+    <div class="sharp-triangle"></div>
+    <div class="isosceles"></div>
+    <div class="arrow-right"></div>
+    <div class="arrow-left"></div>
+    <div class="ribbon"></div>
+
+    <br>
+
+    <div class="f"></div>
+    <div class="eight"></div>
+
+</body>
+</html>
