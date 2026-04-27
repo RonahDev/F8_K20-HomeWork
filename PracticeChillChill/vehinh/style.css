@@ -24,3 +24,15 @@ div {
     height: 50px;
     border: 5px solid black;
 }
+
+.hinhTamGiacLen {
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 70px solid #5cb85c;
+}
+
+.hinhTamGiacXuong{
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 70px solid #5cb85c;
+}
