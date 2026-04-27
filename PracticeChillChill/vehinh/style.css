@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 20px;
+}
+
+div {
+    display: inline-block; /*Nằm cùng 1 dòng*/
+    margin : 15px; /*dùng để tạo khoảng cách với các phần tử xung quanh*/
+    vertical-align: top; /*giúp các phẩn tử thẳng hàng lên mép trên*/
+}
+
+.hinhVuong {
+    width: 60px;
+    height: 60px;
+    border: 5px solid pink;
+}
+
+.hinhChuNhat {
+    width: 80px;
+    height: 50px;
+    border: 5px solid black;
+}
