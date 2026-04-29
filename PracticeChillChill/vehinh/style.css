@@ -34,5 +34,49 @@ div {
 .hinhTamGiacXuong{
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
-    border-top: 70px solid #5cb85c;
+    border-top: 70px solid #d9a441;
 }
+
+.tamGiacTrai {
+    border-top : 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-right: 70px solid #d98a2f;
+}
+
+.tamGiacPhai {
+    border-top : 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 70px solid #9b6ad6;
+}
+
+.hinhThang {
+
+}
+
+.luyenTap {
+    width: 10px;
+    height: 10px;
+
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 50px solid orange;
+    border-right: 50px solid orange;
+}
+
+.F {
+    width: 70px;
+    height: 120px;
+
+    display: inline-block;
+    border-top: 18px solid #d85b3d;
+    border-left: 20px solid orange;
+    margin-right: 30px;
+}
+
+        .F::before {
+            content: "";
+            display: block;
+            width: 55px;
+            border-top: 18px solid #d85b3d;
+            margin-top: 35px;
+        }
