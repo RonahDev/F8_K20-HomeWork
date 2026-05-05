@@ -41,6 +41,9 @@
 
 /*HIỆU ỨNG HOVER PHÓNG TO (scale)*/
 
+.From-Subcribe button {
+    transition: transform 0.3s ease;
+}
 .From-Subcribe button:hover {
     transform: scale(1.08);
 }
