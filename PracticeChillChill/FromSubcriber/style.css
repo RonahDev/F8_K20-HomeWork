@@ -18,10 +18,17 @@
 }
 
 /*Input đổi placeholder sang màu vàng (Giống như chữ Earn income)*/
-.From-Subcribe:hover input::placeholder {
+.From-Subcribe input:hover::placeholder {
      color: #f4c542;
 }
+
 /*Nền của input đổi sang màu ghi (#ddd)*/
 .From-Subcribe input:hover {
     background: #ddd;
+}
+
+/*Màu nền của button chuyển sang màu vàng (Giống như chữ Earn income)*/
+.From-Subcribe button:hover {
+    background: #f4c542;
+    color: #fff;
 }
