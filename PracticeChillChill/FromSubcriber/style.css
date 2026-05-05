@@ -3,6 +3,11 @@
     padding: 20px;
     border-radius: 10px;
 }
+/*Đổi màu thẻ h2*/
+.highlight {
+    color: #f4c542;
+    font-size: 25px;
+}
 
 /*Ô input*/
 
@@ -32,3 +37,15 @@
     background: #f4c542;
     color: #fff;
 }
+
+
+/*HIỆU ỨNG HOVER PHÓNG TO (scale)*/
+
+.From-Subcribe button:hover {
+    transform: scale(1.08);
+}
+
+/*
+1 = kích thước bình thường
+1.1 = to hơn 10%
+*/
