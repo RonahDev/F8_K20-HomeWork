@@ -1,0 +1,27 @@
+.From-Subcribe {
+    background: #3f5368;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*Ô input*/
+
+.From-Subcribe input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.From-Subcribe button {
+    background: #f4c542;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Input đổi placeholder sang màu vàng (Giống như chữ Earn income)*/
+.From-Subcribe:hover input::placeholder {
+     color: #f4c542;
+}
+/*Nền của input đổi sang màu ghi (#ddd)*/
+.From-Subcribe input:hover {
+    background: #ddd;
+}
