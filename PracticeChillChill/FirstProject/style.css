@@ -46,3 +46,28 @@ body {
     font-weight: bold;
     display: block;/*Biến thành 1 khối block , không nằm cùng với thằng nào khác*/
 }
+
+.btn-buy {
+    margin-top : 15px;
+    width: 100%;
+    padding: 15px;
+    background: #4f7df3;
+    color: white;
+    border: none; /*Nếu kh tắt border thì nó sẽ có 1 viền đen nhỏ nhỏ*/
+    border-radius: 10px;
+    cursor: pointer;/*Đưa chuột vào là nó thành hình bàn tay*/
+
+    transition: all 0.25s ease; /*all : áp dụng hiệu ứng cho tất cả thuộc tính (color , width , transform ,background,...
+                                  0.25 : thời gian chạy hiệu ứng
+                                  ease : kiểu chuyển động*/
+
+}
+
+.btn-buy:hover {
+    transform: scale(1.04) translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.btn-buy:active {
+    transform: scale(0.97);/*Khi click giữ thì nó sẽ thu nhỏ lại còn 0.97*/
+                           /*Nó như là khi m nhấn nút thì nút nó lún xuống như ngoài đời th*/
+}
