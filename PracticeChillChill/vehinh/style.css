@@ -63,7 +63,7 @@ div {
     border-right: 50px solid orange;
 }
 
-.F {
+/* .F {
     width: 70px;
     height: 120px;
 
@@ -79,4 +79,18 @@ div {
             width: 55px;
             border-top: 18px solid #d85b3d;
             margin-top: 35px;
-        }
+        } */
+
+.F {
+    width: 70px;
+    height: 120px;
+    border-left: 18px solid #d85b3d;/*Tạo nét dọc bên trái của chữ F*/
+    border-top: 18px solid #d85b3d;/*Tạo nét ngang trên đầu của chữ F*/
+}
+
+/*Dùng before để tạo thêm phần tử giả mà kh cần viết thêm code HTML*/
+.F::before {
+    content: "";/*Này là bắt buộc phải có nếu kh có thì before (phẩn tử giả) sẽ kh xuất hiện*/
+    display: block; /*Cho phần tử giả xuống 1 dòng riêng biệt của chữ F*/
+    
+}
