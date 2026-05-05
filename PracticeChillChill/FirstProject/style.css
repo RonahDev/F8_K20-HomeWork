@@ -71,3 +71,40 @@ body {
     transform: scale(0.97);/*Khi click giữ thì nó sẽ thu nhỏ lại còn 0.97*/
                            /*Nó như là khi m nhấn nút thì nút nó lún xuống như ngoài đời th*/
 }
+
+.stock {
+    margin: 25px 0;
+    color: #333;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: green;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.actions {
+    display: flex;
+    gap : 10px;
+}
+
+.actions button{
+    flex : 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.actions button:hover{
+    transform: scale(1.02);
+    background: #f5f5f5;
+}
+
+.actions button:active {
+    transform: scale(0.98);
+}
