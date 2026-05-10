@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Liên hệ</h1>
+    </header>
+
+    <main>
+
+        <!-- CONTACT FORM -->
+        <section>
+
+            <h2>Form liên hệ</h2>
+
+            <form action="#" method="POST">
+
+                <fieldset>
+
+                    <legend>Thông tin cá nhân</legend>
+
+                    <!-- NAME -->
+                    <label for="name">
+                        Họ tên
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                        minlength="2"
+                    >
+
+                    <br><br>
+
+                    <!-- EMAIL -->
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                    >
+
+                    <br><br>
+
+                    <!-- PHONE -->
+                    <label for="phone">
+                        Số điện thoại
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        pattern="[0-9]{10,11}"
+                    >
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+
+                    <legend>Chủ đề</legend>
+
+                    <select>
+                        <option value="">
+                            -- Chọn chủ đề --
+                        </option>
+
+                        <option>Hỏi về dự án</option>
+                        <option>Hợp tác</option>
+                        <option>Tuyển dụng</option>
+                        <option>Khác</option>
+                    </select>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+
+                    <legend>Mức độ ưu tiên</legend>
+
+                    <input type="radio" name="priority">
+                    Thấp
+
+                    <input type="radio" name="priority">
+                    Trung bình
+
+                    <input type="radio" name="priority">
+                    Cao
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+
+                    <legend>Dịch vụ quan tâm</legend>
+
+                    <input type="checkbox">
+                    Web Development
+
+                    <input type="checkbox">
+                    Mobile App
+
+                    <input type="checkbox">
+                    UI/UX Design
+
+                </fieldset>
+
+                <br>
+
+                <!-- MESSAGE -->
+                <label for="message">
+                    Tin nhắn
+                </label>
+
+                <br>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    required
+                    minlength="10"
+                    placeholder="Nhập tin nhắn của bạn..."
+                ></textarea>
+
+                <br><br>
+
+                <!-- RANGE -->
+                <label for="rate">
+                    Đánh giá website này
+                </label>
+
+                <input
+                    type="range"
+                    id="rate"
+                    min="1"
+                    max="5"
+                    value="5"
+                >
+
+                <br><br>
+
+                <!-- FILE -->
+                <label for="file">
+                    Đính kèm CV
+                </label>
+
+                <input
+                    type="file"
+                    id="file"
+                    accept=".pdf,.doc,.docx"
+                >
+
+                <br><br>
+
+                <!-- TERMS -->
+                <input
+                    type="checkbox"
+                    required
+                >
+
+                Tôi đồng ý với Chính sách bảo mật
+
+                <br><br>
+
+                <!-- BUTTONS -->
+                <button type="submit">
+                    Gửi tin nhắn
+                </button>
+
+                <button type="reset">
+                    Xóa form
+                </button>
+
+            </form>
+        </section>
+
+        <!-- CONTACT INFO -->
+        <section>
+
+            <h2>Thông tin liên hệ</h2>
+
+            <address>
+
+                Email:
+                <a href="mailto:kiet@example.com">
+                    kiet@example.com
+                </a>
+
+                <br>
+
+                Điện thoại:
+                <a href="tel:+84123456789">
+                    0123456789
+                </a>
+
+                <br>
+
+                Địa chỉ:
+                Đà Nẵng, Việt Nam
+
+            </address>
+        </section>
+
+        <!-- MAP -->
+        <section>
+
+            <h2>Bản đồ</h2>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18"
+                width="100%"
+                height="450"
+                loading="lazy"
+            ></iframe>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
