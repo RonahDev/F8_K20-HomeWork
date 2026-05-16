@@ -3,31 +3,44 @@ import "./Todo.css"
 
 function Todo () {
     const [task , setTask] = useState("")
-    const [task , setTasks] = useState([])
+    const [tasks , setTasks] = useState([])
 
     const addTasks = () => {
         if (task.trim() === "") return
 
         setTasks([...tasks, task])
-        {/*GIẢ SỬ HIỆN TẠI
-            tasks = ["Gym", "Study"]
-            và task = "React"
-        Dấu ... gọi là Spread Operator
-        Muốn thêm cái React vào trong cái list tasks hiện tại ["Gym", "Study", "React"]
+/*
+GIẢ SỬ HIỆN TẠI
 
-        ...tasks : lấy toàn bộ phần tử bên trong Array ra
+tasks = ["Gym", "Study"]
+task = "React"
 
-        Ví dụ : tasks = ["Gym", "Study"]
-        khi dùng spread ...tasks
-        nó sẽ thành "Gym", "Study"
+Spread Operator (...) dùng để lấy toàn bộ
+phần tử bên trong array cũ.
 
-        [...tasks, task] => [
-                            "Gym",
-                            "Study",
-                            "React"
-                            ]
-        */}
+...tasks
+=> "Gym", "Study"
+
+Nên:
+
+[...tasks, task]
+
+sẽ thành:
+
+[
+  "Gym",
+  "Study",
+  "React"
+]
+
+React thường dùng spread operator để tạo
+array mới thay vì sửa trực tiếp array cũ.
+*/
 
         setTask("")
     }
+    return (
+
+    )
 }
+export default Todo
