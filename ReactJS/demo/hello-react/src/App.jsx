@@ -1,16 +1,13 @@
-function App() {
-  return ( //render thứ trong return ra màn hình.
+import ProfileCard from "./components/ProfileCard/ProfileCard";
+
+function App () {
+  return (
     <div>
-      <h1>Mai Anh Kiệt</h1> //HTML viết trong javascript
-
-      <p>Front-End và Gym</p>
-
-      <p>22 tuổi</p>
-
-      <button>GitHub</button>
-
-      <button>Youtube</button>
-      
+      <ProfileCard
+        name = "Kiệt"
+        age = "22"
+        hobby = "Gym"
+      />
     </div>
   )
 }
