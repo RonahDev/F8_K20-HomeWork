@@ -40,7 +40,21 @@ array mới thay vì sửa trực tiếp array cũ.
         setTask("")
     }
     return (
+        <div>
+            <input type="text" 
+            value={task}
+            onChange={(e) => {
+                setTask(e.target.value)
+            }}/>
 
+            <button onClick={addTasks}>Add Task</button>
+
+            <ul>
+                {
+                    task
+                }
+            </ul>
+        </div>
     )
 }
 export default Todo
