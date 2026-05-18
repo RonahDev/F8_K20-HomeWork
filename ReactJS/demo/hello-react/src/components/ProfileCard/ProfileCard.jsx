@@ -8,6 +8,8 @@ function ProfileCard (props) {
             <p>Bạn năm nay {props.age} tuổi</p>
 
             <p>Sở thích của bạn là {props.hobby}</p>
+
+            <p>hihi gg</p>
         </div>
     )
 }
