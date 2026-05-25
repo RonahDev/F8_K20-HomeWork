@@ -10,16 +10,39 @@
 
     display : grid;
 
-    grid-template-columns: 
+    grid-template-columns:  /*Cột 1 2 3 4*/
     320px
     330px
     330px
     320px;
 
-    grid-template-rows: 
+    grid-template-rows: /*Hàng 1 2 3 */
     250px
     340px
     250px;
 
     gap : 18px;
+}
+/*Chia vị trí từng card sẽ nằm ở đây*/
+/*Burger*/
+.burger-card {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}/*cột 1 hàng 1*/
+
+/*Phone*/
+.phone-card {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}/*cột 2 hàng 1*/
+
+/*Notify*/
+.notify-card {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}/*cột 3 hàng 1*/
+
+/*Special Menun*/
+.card {
+    border-radius: 34px;
 }
