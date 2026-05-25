@@ -74,6 +74,43 @@
     grid-column:3/5;
     grid-row:3/4;
 }
-.card {
-    border-radius: 34px;
+/*Test layout*/
+.card{
+    border-radius:30px;
+}
+
+.burger-card{
+    background:red;
+}
+
+.phone-card{
+    background:blue;
+}
+
+.notify-card{
+    background:green;
+}
+
+.menu-card{
+    background:orange;
+}
+
+.user-card{
+    background:pink;
+}
+
+.analytics-card{
+    background:purple;
+}
+
+.status-card{
+    background:yellow;
+}
+
+.rating-card{
+    background:brown;
+}
+
+.map-card{
+    background:gray;
 }
