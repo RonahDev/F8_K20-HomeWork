@@ -74,43 +74,54 @@
     grid-column:3/5;
     grid-row:3/4;
 }
-/*Test layout*/
+
+/*==================================================*/
 .card{
-    border-radius:30px;
+    border-radius:34px;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+:root{
+    --orange:#FF6400;
+    --blue:#8BB8F6;
+    --black:#000000;
 }
 
 .burger-card{
-    background:red;
+    background:var(--orange);
 }
 
 .phone-card{
-    background:blue;
+    background:var(--blue);
 }
 
 .notify-card{
-    background:green;
+    background:var(--blue);
 }
 
 .menu-card{
-    background:orange;
+    background:var(--orange);
 }
 
 .user-card{
-    background:pink;
+    background:var(--blue);
 }
 
 .analytics-card{
-    background:purple;
+    background:var(--orange);
 }
 
 .status-card{
-    background:yellow;
+    background:var(--blue);
 }
 
 .rating-card{
-    background:brown;
+    background:var(--orange);
 }
 
 .map-card{
-    background:gray;
+    background:white;
 }
