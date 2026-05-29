@@ -11,13 +11,13 @@
     display : grid;
 
     grid-template-columns:  /*Cột 1 2 3 4*/
-    320px
+    350px
     330px
     330px
     320px;
 
     grid-template-rows: /*Hàng 1 2 3 */
-    250px
+    450px
     340px
     250px;
 
