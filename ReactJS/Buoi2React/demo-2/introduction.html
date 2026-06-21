@@ -8,4 +8,17 @@ Bước 2 :
 -Tạo layout chung trong React Router để tránh lặp lại code Header , Footer , navbar ,... ở nhiều
 trang. Kiểu như tạo 1 lần rồi tái sử dụng lại á chỉ có nội dung của từng trang là khác thôi chứ 
 Header , Footer , navbar ,.. là đa số các trang đều có 
+-Nên tạo 1 trang DefaultLayout để làm cái khung mặc định của trang web , tái sử dụng được nhiều lần 
+
+Header
+----------------
+Nội dung trang
+----------------
+Footer
+
+Outlet dùng để làm gì ?
+- <Outlet /> là chỗ để render Route con.
+- Nếu quên thì Route con sẽ kh xuất hiện
+
+Bước 3 : Tạo Router riêng
 */
