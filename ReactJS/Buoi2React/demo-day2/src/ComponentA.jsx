@@ -1,4 +1,4 @@
-import "./ComponentA.css";
+import "./ComponentA.module.css";
 
 function ComponentA() {
     return <h1 className="heading-a">Component A</h1>
