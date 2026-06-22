@@ -1,7 +1,7 @@
-import "./ComponentB.module.css";
+import styles from "./ComponentB.module.css";
 
 function ComponentB() {
-    return <h1 className="heading-b">Component B</h1>
+    return <h1 className={styles.heading}>Component B</h1>
 }
 
 export default ComponentB;
@@ -15,3 +15,10 @@ export default ComponentB;
 //thuộc tính vẫn giữ nguyên nhưng mỗi className đặt cho mỗi component sẽ có thêm 1 đoạn kí tự được mã hóa đằng sau
 //nó lấy cái đường dẫn file để mã hóa ra chuỗi kí tự mà mỗi đường dẫn tới 1 component kh bao giờ giống nhau
 //nên là kí tự mã hóa đằng sau cũng sẽ khác nhau
+
+//bởi z nên khi đặt className="heading" mà qua css .heading nó kh ăn là do sau cái .heading đó cần thêm 1 đoạn
+//kí tự đã được mã hóa nữa nó mới khớp mới ăn css được
+
+//CÁCH KHẮC CHẾ : đối với css module thì đoạn import "./ComponentB.module.css"; sẽ mặc định export ra 1 cái object
+// cách lấy được cái object đó là import styles from "./ComponentB.module.css";
+// mà hay cái là cái key của nó lại trùng với tên của class
