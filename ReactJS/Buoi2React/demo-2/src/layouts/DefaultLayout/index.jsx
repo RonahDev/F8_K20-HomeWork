@@ -1,15 +1,15 @@
-import React from 'react'
 import { Outlet } from 'react-router'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
-export default function index() {
+export default function DefaultLayout() {
   return (
     <>
-      <header>Header</header>
-
-      
-      <Outlet />
-
-      <footer>Footer</footer>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </>
   )
 }

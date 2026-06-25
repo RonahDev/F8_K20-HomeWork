@@ -1,34 +1,16 @@
-import React from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ProductCard from './components/ProductCard';
-
+import AppRoutes from './components/AppRoutes'
+import Home from './pages/Home'
+import Card from './components/Card'
 export default function App() {
- const products = [
-  {
-    id : 1, 
-    name : "Iphone"
-  },
-  {
-    id : 2,
-    name : "Samsung"
-  },
-  {
-    id : 3,
-    name : "Oppo"
-  }
- ]
   return (
     <>
-      <ul>
-        {
-          products.map(product => (
-            <li key={product.id}>
-              {product.name}
-            </li>
-          ))
-        }
-      </ul>
+      <Card>
+        <h2>Home</h2>
+      </Card>
+
+      <Card>
+        <h2>News</h2>
+      </Card>
     </>
   )
 }
