@@ -3,8 +3,8 @@ import React from 'react'
 export default function OrchidCard({ orchid }) {
   return (
     <div className='card h-100 shadow'>
-      <image
-        src={orchid.image}
+      <img
+        src={orchid.img}
         alt={orchid.name}
         className='card-img-top'
         alt = {orchid.name}
